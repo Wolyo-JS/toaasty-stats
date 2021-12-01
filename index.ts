@@ -411,6 +411,6 @@ connect(CONFIG.MONGODB_URI, {
 })
     .then(async () => {
         pogger.success("MongoDB'ye bağlanıldı.");
-        await client.login(CONFIG.BOT_TOKEN);
+        await client.login(process.env.token);
     });
 
