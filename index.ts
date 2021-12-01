@@ -1,13 +1,13 @@
 import { Client, Collection, GuildMember, Message, MessageEmbed, TextChannel, Guild, VoiceChannel, MessageReaction, User } from "discord.js";
 import { connect } from "mongoose";
 import * as pogger from "pogger";
-import keep_alive from "./keep_alive";
 import { IVoiceModel, VoiceModel } from "./voiceModel";
 import { IChannelModel, ChannelModel } from "./channelModel";
 import { CONFIG } from "./config";
 import ms from "parse-ms";
 import { scheduleJob } from "node-schedule";
 import { stringify } from "querystring";
+const keep_alive = require('./keep_alive');
 
 const channelJoined = new Collection<string, number>();
 
