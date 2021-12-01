@@ -1,6 +1,7 @@
 import { Client, Collection, GuildMember, Message, MessageEmbed, TextChannel, Guild, VoiceChannel, MessageReaction, User } from "discord.js";
 import { connect } from "mongoose";
 import * as pogger from "pogger";
+import keep_alive from "./keep_alive.js";
 import { IVoiceModel, VoiceModel } from "./voiceModel";
 import { IChannelModel, ChannelModel } from "./channelModel";
 import { CONFIG } from "./config";
@@ -21,7 +22,7 @@ const client = new Client({
     presence: {
         activity: {
             type: "PLAYING",
-            name: "Zade ❤️ Labirent"
+            name: "Valena ❤️ Wolyo"
         }
     },
     ws: {
@@ -299,13 +300,13 @@ async function generateLeaderboardsEmbed(guild: Guild): Promise<[MessageEmbed, M
     const textList = await VoiceModel.find({ guildID: guild.id }).sort("-messages").limit(20);
 
     const voice = new MessageEmbed()
-        .setAuthor("Labirent Ses sıralaması | Tüm zamanlar")      
+        .setAuthor("Valena Ses sıralaması | Tüm zamanlar")      
         .setFooter("Son güncelleme")
         .setColor("BLACK")
         .setTimestamp(Date.now());
 
     const text = new MessageEmbed()
-        .setAuthor("Labirent Mesaj sıralaması | Tüm zamanlar")       
+        .setAuthor("Valena Mesaj sıralaması | Tüm zamanlar")       
         .setFooter("Son güncelleme")
         .setColor("BLACK")
         .setTimestamp(Date.now());
