@@ -1,7 +1,7 @@
 import { Client, Collection, GuildMember, Message, MessageEmbed, TextChannel, Guild, VoiceChannel, MessageReaction, User } from "discord.js";
 import { connect } from "mongoose";
 import * as pogger from "pogger";
-import keep_alive from "./keep_alive.js";
+import keep_alive from "./keep_alive";
 import { IVoiceModel, VoiceModel } from "./voiceModel";
 import { IChannelModel, ChannelModel } from "./channelModel";
 import { CONFIG } from "./config";
