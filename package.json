@@ -20,7 +20,7 @@
     "node-schedule": "^2.0.0",
     "parse-ms": "^2.1.0",
     "pogger": "^0.0.8"
-  }
+  },
 "engines": {
     "node": "12.x"
 }
