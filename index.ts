@@ -22,7 +22,7 @@ const client = new Client({
     presence: {
         activity: {
             type: "PLAYING",
-            name: "Valena ❤️ Wolyo"
+            name: "★ Valena ❤️ Wolyo"
         }
     },
     ws: {
