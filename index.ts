@@ -1,4 +1,4 @@
-import { Client, Collection, GuildMember, Message, MessageEmbed, TextChannel, Guild, VoiceChannel, MessageReaction, User } from "discord.js";
+import { Client, Collection, GuildMember, Message, TextChannel, Guild, VoiceChannel, MessageReaction, User } from "discord.js";
 import { connect } from "mongoose";
 import * as pogger from "pogger";
 import { IVoiceModel, VoiceModel } from "./voiceModel";
@@ -8,6 +8,7 @@ import ms from "parse-ms";
 import { scheduleJob } from "node-schedule";
 import { stringify } from "querystring";
 const keep_alive = require('./keep_alive');
+const { MessageEmbed } = require('discord.js);
 
 const channelJoined = new Collection<string, number>();
 
@@ -339,7 +340,7 @@ async function generateTopEmbed(guild: Guild): Promise<MessageEmbed> {
     const textList = await VoiceModel.find({ guildID: guild.id }).sort("-messages").limit(10);
 
     const top = new MessageEmbed()
-        .setAuthor("Labirent Top sıralaması | Tüm zamanlar")
+        .setAuthor("Valena Top sıralaması | Tüm zamanlar")
         .setFooter("Son güncelleme")
         .setColor("BLACK")
         .setTimestamp(Date.now());
